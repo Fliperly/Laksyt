@@ -8,3 +8,4 @@ if pituus <37:
 
 else:
     print("voit syödä kalan")
+
