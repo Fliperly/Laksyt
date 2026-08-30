@@ -10,3 +10,4 @@ elif hyttiluokka == "C":
     print("Ikkunaton hytti autokannen alapuolella.")
 else:
     print("Virheellinen hyttiluokka.")
+
