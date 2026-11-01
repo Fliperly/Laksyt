@@ -1,7 +1,37 @@
+class Hissi:
+
+    def __init__(self, alin, ylin):
+        self.alin = alin
+        self.ylin= ylin
+        self.kerros = alin
+    def kerros_ylös(self):
+        self.kerros += 1
+        print(f"YLÖS => {self.kerros}")
+
+    def kerros_alas(self):
+        self.kerros -= 1
+        print(f"ALAS => {self.kerros}")
+
+    def siirry_kerrokseen(self,kerros):
+        while self.kerros < kerros and self.kerros < self.ylin:
+            self.kerros_ylös()
+        while self.kerros > kerros and self.kerros > self.alin:
+            self.kerros_alas();
+
 class Talo:
 
-    def __init__(self, alin, ylin, lkm):
-        hissit = []
-        for i in range (lkm):
-            hissit.append(HISSI(alin, ylin))
-            
+    def __init__(self, alin, ylin, hissien_lkm):
+        self.alin = alin
+        self.ylin = ylin
+        self.hissit = []
+        for i in range(hissien_lkm):
+            self.hissit.append(Hissi(alin, ylin))
+
+    def aja_hissiä(self, numero, kerros):
+        print(f"Hissi {numero}:")
+        self.hissit[numero - 1].siirry_kerrokseen(kerros)
+
+talo = Talo(1, 10, 3)
+talo.aja_hissiä(1, 3)
+talo.aja_hissiä(2, 7)
+talo.aja_hissiä(3,10)
