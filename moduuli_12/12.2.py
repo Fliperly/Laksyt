@@ -1,6 +1,6 @@
 import requests
 
-api_avain = "LAITA_OMA_API_AVAIMESI_TÄHÄN"
+api_avain = "76db774ebc3ea74b4733cdf8206a809f"
 paikkakunta = input("Anna paikkakunnan nimi: ")
 pyyntö = "https://api.openweathermap.org/data/2.5/weather?q=" + paikkakunta + "&appid=" + api_avain + "&lang=fi"
 
